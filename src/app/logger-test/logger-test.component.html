@@ -1,0 +1,10 @@
+<div class="button">
+
+</div>
+<button type="button" (click)="WriteLog()" class="btn btn-large btn-primary">Write Log</button>
+<button type="button" (click)="ClearLog()" class="btn btn-large btn-primary">Clear Log</button>
+<button type="button" (click)="getLocalStorage()" class="btn btn-large btn-primary">Print Log</button>
+<button type="button" (click)="PostLog()" class="btn btn-large btn-primary">Http Log</button>
+<ul>
+    <li *ngFor="let item of LogMessage">{{item}}</li>
+</ul>
