@@ -49,4 +49,8 @@ export class LoggerTestComponent implements OnInit {
       }
     );
   }
+
+  ThrowError() {
+    throw new DOMException("Hello Exception Handler");
+  }
 }

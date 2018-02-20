@@ -18,6 +18,8 @@ import {
   HttpClient
 } from "@angular/common/http";
 import { MyInterceptor } from "./shared/MyInterceptor";
+import { ErrorHandler } from "@angular/core";
+import { GlobalErrorHandler } from "./shared/execption.service";
 
 @NgModule({
   declarations: [AppComponent, LoggerTestComponent],
@@ -29,7 +31,8 @@ import { MyInterceptor } from "./shared/MyInterceptor";
       useClass: LogPublishersService,
       deps: [HttpClient]
     }, // LogPublishersService,
-    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true },
+    { provide: ErrorHandler, useClass: GlobalErrorHandler }
     // { provide: LogPublisher, useClass: LogConsole },
     // {
     //   provide: LogPublisher,

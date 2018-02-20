@@ -5,6 +5,7 @@
 <button type="button" (click)="ClearLog()" class="btn btn-large btn-primary">Clear Log</button>
 <button type="button" (click)="getLocalStorage()" class="btn btn-large btn-primary">Print Log</button>
 <button type="button" (click)="PostLog()" class="btn btn-large btn-primary">Http Log</button>
+<button type="button" (click)="ThrowError()" class="btn btn-large btn-primary">Throw Error</button>
 <ul>
     <li *ngFor="let item of LogMessage">{{item}}</li>
 </ul>
